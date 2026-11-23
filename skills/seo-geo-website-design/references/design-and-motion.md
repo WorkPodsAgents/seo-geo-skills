@@ -64,7 +64,16 @@ The rules:
    CSS before the script runs, so CLS stays at 0.
 5. **Stay off the main thread.** Animate `transform` and `opacity`, use `requestAnimationFrame`,
    pause when the tab is hidden or the element is off screen (`IntersectionObserver`).
-6. **Purpose.** Motion acts out the section's idea and stops. Nothing loops beside text someone is
+6. **Finished without motion.** The slot already holds the icon's end state as inline SVG in the
+   HTML. Without JavaScript, with reduced motion or with data saver, the reader sees the finished
+   icon, never an empty box. Motion only animates its way to that state.
+7. **One source of colour.** Scripts read colours from the CSS custom properties
+   (`getComputedStyle(document.documentElement).getPropertyValue('--ink')`), so themes and
+   contrast fixes live in one place.
+8. **Words stay in HTML.** Labels that carry meaning ("6 pm cutoff", "Saturday pickup") are HTML
+   text beside or inside the SVG, not text painted on a canvas, which crawlers and screen readers
+   cannot read.
+9. **Purpose.** Motion acts out the section's idea and stops. Nothing loops beside text someone is
    reading.
 
 ## Reference code: deferred loader
@@ -107,11 +116,19 @@ nothing is hidden:
 
 ## Reference code: fixed slot
 
-A slot reserves its box in CSS, so whatever the script draws later cannot push text around.
+A slot reserves its box in CSS, so whatever the script draws later cannot push text around. It
+starts with the finished icon as inline SVG; the script hides that SVG only once its canvas is
+ready.
 
 ```html
 <section aria-labelledby="delivery">
-  <div class="motion-slot" aria-hidden="true"></div>
+  <div class="motion-slot" aria-hidden="true">
+    <svg viewBox="0 0 200 56" width="200" height="56">
+      <circle cx="20" cy="28" r="8" fill="var(--ink)" />
+      <path d="M32 28h120" stroke="var(--muted)" stroke-width="2" />
+      <circle cx="160" cy="28" r="8" fill="var(--accent)" />
+    </svg>
+  </div>
   <p class="label">Delivery</p>
   <h2 id="delivery">Bread delivered before 7 am</h2>
   <p>Orders placed by 9 pm arrive the next morning before 7 am...</p>
@@ -120,7 +137,8 @@ A slot reserves its box in CSS, so whatever the script draws later cannot push t
 
 ```css
 .motion-slot { width: 200px; height: 56px; margin-bottom: 12px; contain: strict; }
-.motion-slot canvas { display: block; width: 100%; height: 100%; }
+.motion-slot svg, .motion-slot canvas { display: block; width: 100%; height: 100%; }
+.motion-slot.is-animated svg { display: none; }
 ```
 
 ```js
@@ -135,14 +153,19 @@ const seen = new IntersectionObserver((entries) => {
     canvas.width = entry.target.clientWidth * ratio
     canvas.height = entry.target.clientHeight * ratio
     entry.target.append(canvas)
+    entry.target.classList.add('is-animated')
     drawIcon(canvas.getContext('2d'), ratio, entry.target.closest('section').id)
   }
 }, { rootMargin: '0px 0px -20% 0px' })
 slots.forEach((slot) => seen.observe(slot))
 
+const css = getComputedStyle(document.documentElement)
+const colour = (name) => css.getPropertyValue(name).trim()
+
 function drawIcon(ctx, ratio, name) {
   ctx.scale(ratio, ratio)
-  // Draw a small icon for this section here, animated with requestAnimationFrame,
+  ctx.fillStyle = colour('--ink')
+  // Animate toward the same shape as the SVG end state with requestAnimationFrame,
   // and stop once it has formed.
 }
 ```

@@ -110,6 +110,7 @@ The short list (detail in the references):
 - On phones, the section label and heading come before the illustration.
 - Static content renders first. Animation loads after the `load` event and an idle callback, is
   off for reduced motion and data saver, and draws into fixed-size slots so layout never shifts.
+  Each slot holds the finished icon as inline SVG, so a reader without motion sees it complete.
 
 ## Step 5: verify
 

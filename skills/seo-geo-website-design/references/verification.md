@@ -70,6 +70,8 @@ a 4x CPU slowdown) at least three times and report the median:
 - [ ] One CTA colour for every primary action, used for nothing else.
 - [ ] Keyboard: every interactive element is reachable and visibly focused.
 - [ ] Animation is off with `prefers-reduced-motion: reduce` and with data saver.
+- [ ] With motion off, every motion slot shows its finished SVG, not an empty box, and meaningful
+      labels are HTML text.
 - [ ] On a 390 px wide phone: no horizontal scroll, nothing clipped, label and heading above each
       illustration.
 - [ ] Zero console errors.
