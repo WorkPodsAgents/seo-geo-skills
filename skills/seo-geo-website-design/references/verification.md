@@ -1,7 +1,12 @@
 # Verification checklist
 
-Run this on every page before calling it done. Report each item as passed or failed, with the
-measured numbers. A page with any failure is not done.
+Run the page checklist on every page and the site checklist on each release. Report each item as
+passed, failed or gap, with the measured numbers.
+
+- A failure is something you can fix in the code or copy (a missing canonical, a slow LCP). The
+  page is not done until every failure is fixed.
+- A gap is a fact only the person can supply (a photo for `og:image`, a customer quote, a
+  reviewer's name). Report it and leave it out; never fake it to pass a check.
 
 ## Contents
 
@@ -12,6 +17,7 @@ measured numbers. A page with any failure is not done.
 - Speed and stability
 - Accessibility and design
 - Agents and AI answers
+- Site checklist
 - Free tools
 
 ## Intent and content
@@ -19,7 +25,7 @@ measured numbers. A page with any failure is not done.
 - [ ] The page owns one primary term, and no other page targets it (check the ownership table).
 - [ ] The primary term is in the title, H1 and first sentence.
 - [ ] Every section's first two sentences answer it on their own.
-- [ ] Commercial pages use declarative H2s and a bottom FAQ of 4 to 6; guides use question H2s.
+- [ ] Commercial pages use declarative H2s and a bottom FAQ of up to 6 real or provisional questions; guides use question H2s.
 - [ ] FAQ answers are 40 to 60 words, first sentence answers.
 - [ ] Every number has a source and date; nothing is invented.
 - [ ] Author and reviewer are real people, unchanged from the source.
@@ -31,7 +37,6 @@ measured numbers. A page with any failure is not done.
 - [ ] Exactly one H1; no skipped heading levels.
 - [ ] Title about 30 to 60 characters, description about 70 to 160, both unique on the site.
 - [ ] One absolute self-referencing canonical, or `noindex` for pages that should not rank.
-- [ ] The page is in the sitemap (if indexable) and `llms.txt` links are current.
 - [ ] `og:title`, `og:description` and a 1200 x 630 `og:image` are present.
 - [ ] Every image has `alt`, `width` and `height`.
 
@@ -45,11 +50,10 @@ measured numbers. A page with any failure is not done.
 ## Links
 
 - [ ] No internal link returns a redirect or an error; every `#anchor` target exists.
-- [ ] The page is linked from at least three other pages, including its hub, and is within two or
-      three clicks of the homepage.
+- [ ] An inner page is linked from at least three other pages, including its hub, and is within
+      two or three clicks of the homepage. (The homepage is exempt.)
 - [ ] Guides link to the commercial page they support.
 - [ ] Internal anchor text uses the target page's own term.
-- [ ] Retired URLs return 301 to a successor or 410.
 
 ## Speed and stability
 
@@ -74,13 +78,25 @@ a 4x CPU slowdown) at least three times and report the median:
       labels are HTML text.
 - [ ] On a 390 px wide phone: no horizontal scroll, nothing clipped, label and heading above each
       illustration.
-- [ ] Zero console errors.
+- [ ] Zero console errors, including a 404 for a missing favicon (link one with
+      `<link rel="icon">`).
 
 ## Agents and AI answers
 
-- [ ] `robots.txt` allows the AI search crawlers the business wants to appear in.
 - [ ] Forms have labels, input types and plain button text; an agent could complete them.
 - [ ] Section openings read as quotable answers when lifted out of the page.
+
+## Site checklist
+
+Run once per release, not per page.
+
+- [ ] The sitemap lists every indexable page and nothing else.
+- [ ] `llms.txt` links match the sitemap's main pages.
+- [ ] `robots.txt` allows the AI search crawlers the business wants to appear in and points to
+      the sitemap.
+- [ ] Retired URLs return 301 to a successor or 410; no internal link hits a redirect.
+- [ ] No two pages share a title, H1 or primary term.
+- [ ] A favicon is served at the root and linked from every page.
 
 ## Free tools
 

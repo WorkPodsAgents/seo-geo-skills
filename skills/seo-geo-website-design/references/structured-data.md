@@ -41,6 +41,10 @@ Notes:
 - schema.org marks the general `ProfessionalService` type as deprecated because it was confused
   with `Service`. Use `Organization`, or the most specific `LocalBusiness` subtype that fits
   (`Bakery`, `LegalService`, `AccountingService`), for the business itself.
+- A local business adds `address`, `geo`, `openingHoursSpecification` and `telephone` when they
+  are known, and the same values appear on the page.
+- Optional properties (`logo`, `founder`, `sameAs`, ratings, awards) go in only when the facts
+  exist. Omit a property rather than fill it with a placeholder.
 - Since 2023 Google shows FAQ rich results only for well-known government and health sites, and it
   no longer shows HowTo rich results. Visible FAQs with matching `FAQPage` markup still help
   readers and machines read the page; just do not expect the rich result.

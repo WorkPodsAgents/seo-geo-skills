@@ -104,7 +104,9 @@ code downloads only when the page is idle.
 ```
 
 Any CSS that prepares an element for animation lives under `.js-motion`, so without the script
-nothing is hidden:
+nothing is hidden. Never hide content that is already on screen when the class is added; the
+reader would see it flash away and back. Give the reveal class only to elements below the fold
+(the script can skip any element whose top is inside the viewport), or animate from visible:
 
 ```css
 .js-motion .reveal { opacity: 0; transform: translateY(8px); }
@@ -118,7 +120,8 @@ nothing is hidden:
 
 A slot reserves its box in CSS, so whatever the script draws later cannot push text around. It
 starts with the finished icon as inline SVG; the script hides that SVG only once its canvas is
-ready.
+ready. In this example the slot is a small icon above the label, so it sits first. A larger
+illustration goes after the label, heading and opening text, so phones keep the mobile order.
 
 ```html
 <section aria-labelledby="delivery">

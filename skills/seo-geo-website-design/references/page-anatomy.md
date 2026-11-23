@@ -32,15 +32,17 @@ and what it gets them, in that order.
 1. **Hero.** H1 = category + audience + outcome ("The family bakery that supplies Austin
    restaurants with bread baked that morning", in a fictional example). Under it, one entity
    sentence that states plainly what the business is, where it works and what it does. Then the
-   primary CTA and proof that exists (customer logos, a real rating, an award with its year).
+   primary CTA and proof that exists (customer logos, a real rating, an award with its year). With
+   no cleared proof, leave the proof line out.
 2. **Capability sections.** Each H2 is a declarative statement of a capability or differentiator
    ("Bread delivered before 7 am", not "Why choose us?"). Each section opens with two quotable
    sentences, then shows what only this business can say: its own data, its method, its people.
    Third-party statistics support the point; they are never the whole answer.
 3. **How it works.** The steps in the order a customer lives them.
 4. **Pricing or how to start**, if the business publishes it.
-5. **Who does the work.** Named people with roles, linking to profile pages.
-6. **FAQ.** 4 to 6 real buyer questions (see FAQ blocks).
+5. **Who does the work.** Named people with roles, linking to profile pages. Omit the section
+   when no names are cleared for the page.
+6. **FAQ.** Up to 6 real buyer questions (see FAQ blocks).
 7. **Closing CTA.**
 
 Why no question H2s here: question headings dilute the entity signal (what the page is about),
@@ -101,7 +103,11 @@ For people who want to do something now (a checker, a calculator, a generator).
 
 - 4 to 6 questions on commercial pages. More becomes a guide.
 - Questions as buyers type them. Take them from "People also ask", sales calls and support
-  tickets, never invented to stuff keywords.
+  tickets. Never invent questions to stuff keywords.
+- With no customer or search data, derive questions from the business's own facts and the page's
+  intent (what a buyer must know before acting: hours, ordering, delivery, price), and mark each
+  one as provisional in your report until real data confirms it.
+- If fewer than 4 questions hold up, ship fewer. Do not pad the FAQ to reach a count.
 - Each answer is 40 to 60 words and its first sentence answers the question directly.
 - Do not repeat a question another page owns; link to that page instead.
 - Render answers in the HTML. A `<details>` element is fine because the text stays in the DOM.

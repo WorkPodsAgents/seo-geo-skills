@@ -59,6 +59,9 @@ results for each term in the target country and count the domains they share.
 | 2 to 3 | Related | One page can carry the second as a secondary term |
 | 0 to 1 | Different intents | Separate pages |
 
+Without keyword data, pick a provisional primary term from the business's category, location and
+main offer, and flag it as provisional until real data confirms it.
+
 When an existing page competes with a more important page, retarget it to a term nobody owns
 instead of letting the two fight. Then link pages in hub and spoke clusters: each supporting page
 links to the page it supports, and every internal link uses the target page's own term as its
@@ -68,8 +71,8 @@ anchor text.
 
 | Page type | H1 | H2s | Questions |
 |---|---|---|---|
-| Homepage | Category + audience + outcome | Declarative capabilities and differentiators | Only in a bottom FAQ of 4 to 6 |
-| Service page | Names the service | Declarative capabilities | Only in a bottom FAQ of 4 to 6 |
+| Homepage | Category + audience + outcome | Declarative capabilities and differentiators | Only in a bottom FAQ of up to 6 |
+| Service page | Names the service | Declarative capabilities | Only in a bottom FAQ of up to 6 |
 | Guide | The question or topic | Questions, each answered in its first two sentences | The H2s are the questions |
 | Comparison | "X vs Y" | Criteria, then a table | Bottom FAQ |
 | Tool page | What the tool does | What it checks, how to use it | Bottom FAQ |
@@ -77,6 +80,9 @@ anchor text.
 Commercial pages lead with positioning. Question headings on a homepage dilute what the page is
 about, slow down a buyer who already knows what they want, and compete with the guides that own
 those questions. FAQ answers are 40 to 60 words, and the first sentence answers the question.
+Never invent questions: without search or customer data, derive them from the business's facts,
+mark them provisional, and ship fewer than four if fewer hold up. Leave out any section or schema
+property (proof, team, logo, founder, `sameAs`) whose facts are missing.
 
 On every page type, the first two sentences of each section answer that section on their own.
 AI answers quote short, self-contained passages, so write each section opening as if it will be
@@ -115,7 +121,8 @@ The short list (detail in the references):
 ## Step 5: verify
 
 Run the checklist in [references/verification.md](references/verification.md) on every page before
-reporting it as done, and report the results with the numbers. Default targets for a marketing
+reporting it as done, and report the results with the numbers. Fix every failure. Report a gap
+(a fact only the person can supply, such as a photo or a quote) instead of faking it. Default targets for a marketing
 page in Lighthouse mobile: LCP 2.0 s or less, TBT 100 ms or less, CLS 0.05 or less. These are
 stricter than Google's Core Web Vitals "good" thresholds on purpose, because lab runs on a fast
 machine flatter real phones.

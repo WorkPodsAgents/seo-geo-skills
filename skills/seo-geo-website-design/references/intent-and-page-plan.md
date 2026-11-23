@@ -26,6 +26,11 @@ For each product, service or topic, collect:
 If you cannot get real data, say so and ask the person for it. A plan built on guessed volumes
 sends pages after terms nobody searches.
 
+If you must build before data arrives, choose a provisional primary term from the business's
+category, location and main offer as people would type them ("sourdough bakery portland",
+"wholesale bakery austin"). Mark it provisional in the ownership table and in your report, write
+no volume next to it, and check it against real data before launch.
+
 ## Build the term ownership table
 
 One row per page. Each search term appears in exactly one row.
@@ -100,8 +105,8 @@ specific term first.
   that sells the work.
 - Anchor text is the target page's own primary term, written naturally into a sentence. Avoid
   "click here" and avoid using another page's term as an anchor to the wrong page.
-- Keep every indexable page within two or three clicks of the homepage, and linked from at least
-  a few other pages. A page no other page links to (an orphan) is hard for crawlers to find and
+- Keep every indexable page within two or three clicks of the homepage. Every inner page is linked
+  from at least three other pages, including its hub (the homepage is exempt). A page no other page links to (an orphan) is hard for crawlers to find and
   rarely ranks.
 
 ## Example: a fictional bakery
