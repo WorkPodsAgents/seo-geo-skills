@@ -163,7 +163,7 @@ labels. So:
   tools for browser agents. Chrome documents declarative form attributes (`toolname`,
   `tooldescription`, and `toolparamdescription` on fields) and an imperative
   `document.modelContext.registerTool()`. It is experimental, so check its current status before
-  relying on it, and treat it as an addition to good labels, not a replacement.
+  relying on it. Agents without WebMCP still depend on the labels.
 
 ```html
 <form action="/quote" method="post"
