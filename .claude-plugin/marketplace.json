@@ -1,0 +1,13 @@
+{
+  "name": "seo-geo-skills",
+  "owner": { "name": "WorkPods.ai", "email": "yours@workpods.ai", "url": "https://workpods.ai" },
+  "description": "SEO and GEO skills for Claude, Codex and other AI agents, by WorkPods.ai.",
+  "plugins": [
+    {
+      "name": "seo-geo-skills",
+      "version": "1.0.0",
+      "source": "./",
+      "description": "Design pages that rank in search and get cited in AI answers, and write SEO copy with a humanizer pass."
+    }
+  ]
+}

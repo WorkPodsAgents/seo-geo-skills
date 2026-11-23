@@ -1,0 +1,10 @@
+{
+  "name": "seo-geo-skills",
+  "version": "1.0.0",
+  "description": "Two skills by WorkPods.ai: design and build pages that rank in search and get cited in AI answers, and write SEO copy that reads like a person wrote it.",
+  "author": { "name": "WorkPods.ai", "email": "yours@workpods.ai", "url": "https://workpods.ai" },
+  "homepage": "https://github.com/WorkPodsAgents/seo-geo-skills",
+  "repository": "https://github.com/WorkPodsAgents/seo-geo-skills",
+  "license": "MIT",
+  "keywords": ["seo", "geo", "ai-search", "technical-seo", "seo-copywriting", "humanizer", "agent-skills"]
+}
