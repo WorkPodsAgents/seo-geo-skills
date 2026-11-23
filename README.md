@@ -152,7 +152,14 @@ MIT, copyright WorkPods.ai. See [LICENSE](LICENSE).
 
 ## About WorkPods.ai
 
-WorkPods.ai is an AI SEO agency. We also publish
-[Agent Ready](https://github.com/WorkPodsAgents/agent-ready), a free tool that checks a site for
-SEO, GEO and AI agent readiness. Questions or fixes: open an issue, or write to
-yours@workpods.ai.
+WorkPods.ai is an AI SEO agency. We also publish free, open-source tools that pair with these
+skills:
+
+- [Agent Ready](https://github.com/WorkPodsAgents/agent-ready), an SEO Chrome extension and MCP
+  server that checks a built page for SEO, GEO and AI agent readiness
+  ([tool page](https://workpods.ai/tools/agent-ready)).
+- [Local SEO](https://github.com/WorkPodsAgents/local-seo), a Google Business Profile audit and
+  Maps rank checker ([tool page](https://workpods.ai/tools/local-seo)).
+
+See [all free WorkPods.ai SEO tools](https://workpods.ai/tools). Questions or fixes: open an
+issue, or write to yours@workpods.ai.
