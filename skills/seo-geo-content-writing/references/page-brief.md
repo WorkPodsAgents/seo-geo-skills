@@ -23,7 +23,7 @@ Not this page:   terms other pages own, and which page owns each
 Buyer questions: 4 to 6 real questions, with where each came from
 Facts available: each fact with its source and date
 Proof available: logos, ratings, awards, case studies the business has cleared for public use
-Author/reviewer: real names, unchanged from the current page
+Author/reviewer: real names: as on the current page, or ask who for a new page
 Supports:        the commercial page this guide links to (guides only)
 H1:              draft
 Title:           draft, about 30 to 60 characters
@@ -81,7 +81,7 @@ Facts available: delivery before 7 am for orders by 9 pm (the business's deliver
 Proof available: none cleared yet; leave the logo strip out
 Author/reviewer: the head baker (author), the owner (reviewer)
 H1:              Wholesale bread for Austin restaurants, delivered before 7 am
-Title:           Wholesale Bakery in Austin | Larkspur Oven
+Title:           Wholesale bakery in Austin | Larkspur Oven
 Description:     Fresh bread for Austin restaurants and cafes, baked overnight and delivered
                  before 7 am. Order by 9 pm. Ask for a sample box.
 H2s:             Bread delivered before 7 am | A menu built with your chef | Simple standing

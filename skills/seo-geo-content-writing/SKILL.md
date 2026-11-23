@@ -43,12 +43,19 @@ Secondary terms: close variants this page also carries
 Not this page:   terms other pages own, and which page owns each
 Buyer questions: 4 to 6 real questions (People also ask, sales calls, support)
 Facts available: each fact with its source and date
-Author/reviewer: real names, unchanged from the current page
+Author/reviewer: real names: as on the current page, or ask who for a new page
 Supports:        the commercial page this guide links to (guides only)
 ```
 
 If a fact, number or name you need is not in the brief's sources, leave it out or ask for it.
 Never fill the gap with something plausible.
+
+Without keyword or question data, ask for it. If you must proceed, pick the most likely term and
+questions yourself, mark them "unverified" in the brief, and say so in your report so a person
+can check them before the page ships.
+
+Output Markdown with the title and description in front matter, unless the person's site uses
+another format.
 
 ## Step 2: draft answer-first
 
@@ -60,24 +67,27 @@ the H1, the first sentence and the title, written naturally.
 
 ### Section size
 
-About 40 to 120 words of body per section, one idea each. Split a section that
-makes two points.
+About 40 to 120 words of body per section, one idea each. Split a section that makes two points.
+If the facts for a section run out before 40 words, leave it short or merge it into a neighbour,
+and list the missing facts in your report. Never pad a section to reach a count.
 
 ### Headings
 
 Commercial pages (homepage, services) use declarative H2s that state a capability.
-Guides use the questions people search as H2s. Sentence case everywhere.
+Guides use the questions people search as H2s. Headings use sentence case.
 
 ### FAQ answers
 
-4 to 6 questions on commercial pages. Each answer is 40 to 60 words and its first
-sentence answers the question. Count the words.
+4 to 6 questions on commercial pages. Each answer is 40 to 60 words and its first sentence
+answers the question. Count the words. When the facts cannot fill 40 words without repeating
+another answer, use fewer questions rather than padding; four good answers beat six thin ones.
 
 ### Quotable facts
 
-Write facts as plain sentences with a subject, a number and a source, following the pattern
-"[Source] found in [month year] that [number] of [group] [did what]." Give every number its source
-and date. Prefer your own data and method; third-party figures support a point, they are
+State the business's own facts (hours, prices, dates, method) plainly; their source is the
+business, recorded in the brief. Write third-party figures as plain sentences with a subject, a
+number and a source, following the pattern "[Source] found in [month year] that [number] of
+[group] [did what]." Prefer your own data and method; third-party figures support a point, they are
 rarely the point.
 
 ### Never invent
@@ -87,12 +97,15 @@ or authors. If the page needs proof you do not have, say what is missing.
 
 ### Bylines
 
-Keep the author and reviewer exactly as given. Never reassign who reviewed a page.
+Keep the author and reviewer exactly as given or as on the current page. For a new page, ask who
+wrote and who reviewed it. Never reassign who reviewed a page.
 
 ### Internal links
 
-Link to the page that owns a related term, using that page's own term as the
-anchor text, inside a sentence. Never target another page's term on this page.
+Link to the page that owns a related term, using that page's own term as the anchor text, inside
+a sentence. You may change word order, capitals or plurals so it reads naturally ("preorder from
+our Portland bakery" for the term "bakery preorder portland"), but keep its words. Never target
+another page's term on this page; a short answer that links to the owner page is fine.
 
 ### Titles and descriptions
 
