@@ -20,6 +20,10 @@ metadata:
 By WorkPods.ai. This skill is how we write pages that search engines rank and AI answers quote,
 then edit them until they read like a person wrote them. It works for any business.
 
+Google judges content by its quality, not by whether AI helped write it, but pages produced in bulk
+mainly to rank break its scaled content abuse policy. Write fewer pages, each with facts only this
+business can state.
+
 The work has four steps: brief, draft, humanize, check. Do them in order. Skipping the brief is the
 most common reason a page ranks for nothing.
 
