@@ -18,8 +18,9 @@ The section order and heading style for each kind of page, and why.
 - One H1 that carries the page's primary term.
 - The first two sentences of every section answer that section without the rest of the page. AI
   answers lift short passages; a section that needs its neighbours to make sense is not quotable.
-- One idea per section, about 40 to 120 words of body text. Long pages are fine; long sections
-  are not.
+- One idea per section, about 40 to 120 words of body text in the HTML. Of that, a person sees
+  the heading, one answer sentence and a visual; the rest folds into `<details>` (see
+  [lean-layout.md](lean-layout.md)). Long pages are fine; long visible sections are not.
 - Headings in sentence case and written as statements or questions, never as slogans.
 - A visible breadcrumb at the top of every page below the homepage.
 - A clear primary action (one CTA style) near the top and again at the end.
@@ -85,7 +86,9 @@ For "X vs Y" and "best X" intents.
 2. A two to three sentence verdict up front: who should pick which, and why.
 3. The criteria, each as an H2 with a short answer.
 4. A comparison table with the same rows for every option. Use plain words in cells, not ticks
-   alone, so the table reads without colour.
+   alone, so the table reads without colour. On a phone, keep it a grid: short column heads
+   once, each row's name across the width, and the answers side by side under it. Never a card
+   per row.
 5. If you are one of the options, disclose it near the top and state your method.
 6. FAQ, sources, updated date.
 
@@ -110,7 +113,8 @@ For people who want to do something now (a checker, a calculator, a generator).
 - If fewer than 4 questions hold up, ship fewer. Do not pad the FAQ to reach a count.
 - Each answer is 40 to 60 words and its first sentence answers the question directly.
 - Do not repeat a question another page owns; link to that page instead.
-- Render answers in the HTML. A `<details>` element is fine because the text stays in the DOM.
+- Render answers in the HTML, collapsed by default: each question is a `<summary>` and its
+  answer sits in the `<details>`, so the text stays in the DOM.
 - Add `FAQPage` JSON-LD only when the questions and answers in it match the visible ones
   word for word.
 

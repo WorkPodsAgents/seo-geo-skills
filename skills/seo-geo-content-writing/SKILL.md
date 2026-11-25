@@ -12,7 +12,7 @@ license: MIT
 metadata:
   author: WorkPods.ai
   homepage: https://workpods.ai
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # SEO and GEO content writing
@@ -65,9 +65,16 @@ The first two sentences of the page and of every section answer the question tha
 section exists for, so they make sense if an AI answer quotes them alone. Put the primary term in
 the H1, the first sentence and the title, written naturally.
 
+Write the first sentence so it can be the only line a person sees. A lean layout shows each
+section's heading, its first sentence and a visual, and folds the rest away (see the design
+skill's lean-layout reference). So the first sentence answers the question on its own, in one
+sentence, ideally 20 words or fewer. The second sentence sits in the fold and must still read
+well straight after the first.
+
 ### Section size
 
-About 40 to 120 words of body per section, one idea each. Split a section that makes two points.
+About 40 to 120 words of body per section, one idea each. Most of it will sit in a fold, so
+write it as the detail behind the answer, not a second introduction. Split a section that makes two points.
 If the facts for a section run out before 40 words, leave it short or merge it into a neighbour,
 and list the missing facts in your report. Never pad a section to reach a count.
 
@@ -122,7 +129,9 @@ wider set of AI tells.
 ### Illustration microcopy
 
 When a section has an illustration, its text is a few labels, not
-sentences: "Order placed 9:04 pm", "Out for delivery", "Delivered 6:42 am". Mark invented sample
+sentences: "Order placed 9:04 pm", "Out for delivery", "Delivered 6:42 am". A list in the copy
+often becomes the visual, so keep each point short enough to work as a label. A stat plate
+needs a figure, a label of two to four words and a source line. Mark invented sample
 data "Example". Describe each visual for the designer in a short comment under the section, 25
 words or fewer.
 

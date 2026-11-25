@@ -11,6 +11,7 @@ passed, failed or gap, with the measured numbers.
 ## Contents
 
 - Intent and content
+- Lean layout
 - HTML and crawlability
 - Structured data
 - Links
@@ -30,10 +31,22 @@ passed, failed or gap, with the measured numbers.
 - [ ] Every number has a source and date; nothing is invented.
 - [ ] Author and reviewer are real people, unchanged from the source.
 
+## Lean layout
+
+- [ ] The hero shows only the H1 (two lines or fewer at 390 px), one line of 20 words or fewer,
+      the CTA and real proof.
+- [ ] Each section shows one answer sentence; the rest of its prose is in `<details>`.
+- [ ] No list shows as plain text outside a visual; no card sits inside a card.
+- [ ] The FAQ starts collapsed.
+- [ ] After a redesign, every heading, the first two sentences of every section and every FAQ
+      answer are byte-identical to before, unless the person asked for the change.
+- [ ] Report the visible word count before and after, for the hero and above the FAQ.
+
 ## HTML and crawlability
 
 - [ ] With JavaScript disabled (or with `curl`), every word of the page is present and readable.
-- [ ] No CSS hides content unless a script-added class gates it.
+- [ ] No CSS hides content unless a script-added class gates it. Folded text uses `<details>`.
+- [ ] The Markdown alternate and `llms-full.txt`, if published, carry every word of the page.
 - [ ] Exactly one H1; no skipped heading levels.
 - [ ] Title about 30 to 60 characters, description about 70 to 160, both unique on the site.
 - [ ] One absolute self-referencing canonical, or `noindex` for pages that should not rank.

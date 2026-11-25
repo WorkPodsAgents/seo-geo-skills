@@ -11,7 +11,7 @@ stack.
 
 | Skill | What it does |
 |---|---|
-| [`seo-geo-website-design`](skills/seo-geo-website-design/SKILL.md) | SEO website design from the page plan up: one page per search intent, the SERP overlap test for keyword cannibalisation, page anatomy for homepages, service pages, guides, comparison and tool pages, a technical SEO checklist (server HTML, titles, canonicals, JSON-LD, redirects, AI crawlers, llms.txt, agent-usable forms), calm design, motion that keeps Core Web Vitals green, and a verification checklist. |
+| [`seo-geo-website-design`](skills/seo-geo-website-design/SKILL.md) | SEO website design from the page plan up: one page per search intent, the SERP overlap test for keyword cannibalisation, page anatomy for homepages, service pages, guides, comparison and tool pages, a technical SEO checklist (server HTML, titles, canonicals, JSON-LD, redirects, AI crawlers, llms.txt, agent-usable forms), a lean layout that shows people little text while crawlers read every word, calm design, motion that keeps Core Web Vitals green, and a verification checklist. |
 | [`seo-geo-content-writing`](skills/seo-geo-content-writing/SKILL.md) | SEO content writing and SEO copywriting: the page brief, answer-first sections that AI answers can quote, FAQ answers, sourced facts, bylines and internal link anchors, then a humanizer pass that removes AI writing tells while keeping facts and keywords intact. |
 
 Use them together when you build a page: the design skill for structure and the technical layer,
@@ -128,6 +128,7 @@ skills/
       page-anatomy.md           section order by page type, FAQs, bylines
       technical-seo.md          crawlability, redirects, AI crawlers, llms.txt, forms
       structured-data.md        JSON-LD by page type, with examples
+      lean-layout.md            little visible text, every word in the HTML, and how to check it
       design-and-motion.md      calm design, contrast, deferred motion with reference code
       verification.md           the checklist to run before a page ships
       sources.md                where each claim was checked
@@ -138,6 +139,15 @@ skills/
       humanizer.md              the AI writing tells and the review checklist
       sources.md
 ```
+
+## Changes
+
+- **1.1.0:** the design skill adds a lean layout: the hero shows the H1, one line and the CTA;
+  each section shows its heading, one answer sentence and a visual, with the rest in
+  `<details>`. It covers what is safe to fold for crawlers, phone tables without cards, one
+  border level, motion that starts on first input, and build checks. The writing skill writes
+  the first sentence of each section to stand alone as the only visible line.
+- **1.0.0:** first release.
 
 ## Credits
 

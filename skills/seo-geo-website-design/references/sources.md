@@ -72,3 +72,13 @@ checked (November 2026). Search engine behaviour changes; re-check before relyin
 - Draft community group report: https://webmachinelearning.github.io/webmcp/
 - Chrome documentation and declarative API: https://developer.chrome.com/docs/ai/webmcp and
   https://developer.chrome.com/docs/ai/webmcp/declarative-api
+
+## Folded content (tabs, accordions, details)
+
+- Google, mobile-first indexing best practices (content in accordions or tabs on mobile is fine
+  when it matches the desktop page): https://developers.google.com/search/mobile-sites/faq
+- Google staff say tabbed and accordion content gets full weight (Search Engine Roundtable
+  coverage, 2016 to 2020): https://www.seroundtable.com/google-content-tabs-hidden-change-22950.html
+  and https://seroundtable.com/google-index-rank-content-in-accordions-tabs-fully-26379.html
+- Google may not show folded text in search snippets: https://www.seroundtable.com/google-content-hidden-search-snippets-27582.html
+- An SEO test that disagrees (2022): https://www.seroundtable.com/seo-content-tabs-hidden-google-rankings-33045.html

@@ -4,15 +4,16 @@ description: >-
   Plan, build and check web pages that rank in search and get quoted in AI answers (SEO and GEO).
   Covers keyword-to-page mapping and the cannibalisation test, page anatomy for homepages, service
   pages, guides, comparison and tool pages, technical SEO (server HTML, titles, canonicals,
-  JSON-LD, redirects, llms.txt, AI crawlers, agent-usable forms), calm design, motion that does
-  not hurt Core Web Vitals, and a verification checklist. Use when designing or building a
-  website, landing page or page template, planning a site structure, doing an SEO website
-  redesign, writing a technical SEO checklist, or reviewing a page before launch.
+  JSON-LD, redirects, llms.txt, AI crawlers, agent-usable forms), a lean layout that shows people
+  little text while crawlers still read every word, calm design, motion that does not hurt Core
+  Web Vitals, and a verification checklist. Use when designing or building a website, landing
+  page or page template, planning a site structure, doing an SEO website redesign, fixing a page
+  that is too wordy, writing a technical SEO checklist, or reviewing a page before launch.
 license: MIT
 metadata:
   author: WorkPods.ai
   homepage: https://workpods.ai
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
 # SEO and GEO website design
@@ -34,7 +35,8 @@ when you reach that step.
 2. Pick the page anatomy for the page type. See [references/page-anatomy.md](references/page-anatomy.md).
 3. Build the technical layer. See [references/technical-seo.md](references/technical-seo.md) and
    [references/structured-data.md](references/structured-data.md).
-4. Design and add motion without slowing the page. See
+4. Lay the page out lean, then design and add motion without slowing it. See
+   [references/lean-layout.md](references/lean-layout.md) and
    [references/design-and-motion.md](references/design-and-motion.md).
 5. Verify before you call the page done. See [references/verification.md](references/verification.md).
 
@@ -105,7 +107,19 @@ The short list (detail in the references):
   canonicals, the sitemap and `llms.txt` change in the same release.
 - Forms have real labels, so people and agents can fill them in.
 
-## Step 4: calm design and motion that costs nothing
+## Step 4: lean layout, calm design and motion that costs nothing
+
+People skim; crawlers and AI answers read everything. Serve both from one HTML page:
+
+- Never change a heading, an answer sentence or an FAQ answer to make a layout work.
+- The hero shows the H1, one line of 20 words or fewer, the CTA and real proof. Nothing else.
+- Each section shows its heading, one answer sentence and one visual. The rest sits in a native
+  `<details>`, which keeps the text in the HTML.
+- Lists become visuals, numbers become stat plates, and the FAQ starts collapsed.
+- One border level: never a card inside a card.
+- The page's Markdown alternate and `llms-full.txt` keep every word with no folds.
+
+Then the design rules:
 
 - Calm and uncluttered: short sections, generous space, one idea per section and per visual.
 - One CTA colour, used for every primary action and for nothing else. Text links get a different
@@ -114,8 +128,9 @@ The short list (detail in the references):
 - Prefer a few large panels to grids of identical cards.
 - Every text and background pair passes WCAG AA contrast, including small labels on dark themes.
 - On phones, the section label and heading come before the illustration.
-- Static content renders first. Animation loads after the `load` event and an idle callback, is
-  off for reduced motion and data saver, and draws into fixed-size slots so layout never shifts.
+- Static content renders first. Animation loads after the `load` event and an idle callback (or
+  on the visitor's first input), is off for reduced motion and data saver, and draws into
+  fixed-size slots so layout never shifts.
   Each slot holds the finished icon as inline SVG, so a reader without motion sees it complete.
 
 ## Step 5: verify
@@ -134,6 +149,8 @@ machine flatter real phones.
 - Do not add `FAQPage` markup without a visible FAQ, or any markup that says something the page
   does not show.
 - Do not render content only on the client, or hide it with CSS until a script adds a class.
+  Fold text with `<details>` instead.
+- Do not show a wall of prose. If a section shows more than one paragraph, fold the rest.
 - Do not invent facts, clients, logos, numbers, reviews or authors for a page. Leave a gap and say
   what is needed.
 - Do not ship motion that moves layout, blocks the main thread at load, or ignores

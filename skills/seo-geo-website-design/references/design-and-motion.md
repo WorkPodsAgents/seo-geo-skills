@@ -19,6 +19,10 @@ How to make pages pleasant to read and still fast, with animation that never cos
 - Avoid the template look: an eyebrow, a heading, a paragraph and a grid of rounded cards,
   repeated down the page. Use a few large panels, a table, a diagram or a single strong figure
   instead.
+- One border level per section. A panel can hold content, but never a card inside it. On a
+  phone, use dividers, thin lines and dots instead of boxes.
+- Show little text. Each section shows its heading, one answer sentence and a visual; the rest
+  folds into `<details>`. See [lean-layout.md](lean-layout.md).
 - Keep the reading measure at about 60 to 80 characters for long text.
 - Use one typeface family with two or three weights. Load it with `font-display: swap` and
   preload the one file the hero needs.
@@ -57,7 +61,10 @@ The rules:
    content (`opacity: 0`, `visibility: hidden`, a blur) unless it is scoped under a class that a
    script adds, so a crawler without JavaScript still reads every word.
 2. **Load late.** Import animation code only after the `load` event and then an idle callback,
-   with a timeout fallback for browsers that lack `requestIdleCallback`.
+   with a timeout fallback for browsers that lack `requestIdleCallback`. To keep Total Blocking
+   Time near zero, wait instead for the visitor's first input (scroll, pointer, key or touch),
+   with the idle path as the fallback. A default Lighthouse run sends no input, so the motion
+   code stays out of its measurement, and a real visitor sees motion start the moment they move.
 3. **Respect the reader.** Skip animation entirely when `prefers-reduced-motion: reduce` matches
    or when the browser reports data saver (`navigator.connection.saveData`, Chromium only).
 4. **Reserve space.** Every animated element draws into a slot whose width and height are set in
